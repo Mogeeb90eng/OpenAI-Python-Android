@@ -27,6 +27,10 @@ jobs:
 
           cp -a "$SOURCE/." .
 
+          rm -rf extracted
+
+          rm -f .github/workflows/android-apk.yml
+
       - name: Commit extracted files
         run: |
           git config user.name "github-actions[bot]"
@@ -35,6 +39,6 @@ jobs:
           git add -A
 
           if ! git diff --cached --quiet; then
-            git commit -m "Extract Android project files"
+            git commit -m "Add Android project source files"
             git push
           fi
