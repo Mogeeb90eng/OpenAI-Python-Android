@@ -1,6 +1,6 @@
 import importlib.metadata
 import openai
-import httpx2
+import httpx
 import pydantic
 import anyio
 import jiter
